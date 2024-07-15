@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const gameCard = document.createElement('div');
         gameCard.className = 'game-card';
         gameCard.onclick = () => {
-            window.location.href = `/${gameDirs[i]}/`;
+            window.location.href = `${window.location.pathname}${gameDirs[i]}/`;
         };
 
         const gameTitle = document.createElement('h2');
