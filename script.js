@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let gameLink;
         if (deviceAndroid) {
             gameLink = document.createElement('a');
-            gameLink.href = `/${gameDirs[i]}/${apkTitles[i]}`;
+            gameLink.href = `${window.location.pathname}${gameDirs[i]}/${apkTitles[i]}`;
             gameLink.textContent = `Download`;
             gameLink.className = 'download-button';
         } else {
