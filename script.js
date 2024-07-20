@@ -5,7 +5,7 @@ function isAndroid() {
 document.addEventListener('DOMContentLoaded', () => {
     const gameDirs = ['puzzle-game', 'connect-4', "higher-lower"];
     const gameNames = ['(n²-1) - Puzzle', 'Connect 4', "Higher Or Lower"];
-    const apkTitles = ["(n^2)-1 Puzzle.apk", 'Connect 4.apk', "Higher Or Lower.apk"];
+    const apkTitles = ["https://github.com/c0deGIO/APK-Gallery/raw/main/puzzle-game/(n^2)-1 Puzzle.apk", 'https://github.com/c0deGIO/APK-Gallery/raw/main/connect-4/Connect 4.apk', "https://github.com/c0deGIO/APK-Gallery/raw/main/higher-lower/Higher Or Lower.apk"];
     const deviceAndroid = isAndroid();
 
     const gamesContainer = document.getElementById('games-container');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let gameLink;
         if (deviceAndroid) {
             gameLink = document.createElement('a');
-            gameLink.href = `${gameDirs[i]}/${apkTitles[i]}`;
+            gameLink.href = `${apkTitles[i]}`;
             //gameLink.href = `${window.location.pathname}${gameDirs[i]}/${apkTitles[i]}`;
             gameLink.textContent = `Download`;
             gameLink.className = 'download-button';
